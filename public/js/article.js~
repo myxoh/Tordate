@@ -1,0 +1,45 @@
+var voting = 0;
+
+function displayThanks(){
+
+	if(document.getElementById("thanks").style.opacity!="1"){
+		document.getElementById("thanks").style.opacity="1";
+		document.getElementById("thanks").style.style.filter='alpha(opacity=100)';
+	}
+
+}
+
+document.addEventListener('click', function(e) {
+
+		switch(e.target.id){
+
+			case "upvote":
+				if(voting==0||voting==2){
+					document.getElementById("upvote").className+= " activeVote";
+					document.getElementById("downvote").className= "vote downvote";
+					
+					displayThanks();
+					
+					voting = 1;
+				}else if(voting==1){
+					document.getElementById("upvote").className= "vote upvote";
+					voting = 0;
+				}
+			break;
+
+			case "downvote":
+				if(voting==0||voting==1){
+					document.getElementById("upvote").className= "vote upvote";
+					document.getElementById("downvote").className+= " activeVote";
+
+					displayThanks();
+
+					voting = 2;
+				}else if(voting==2){
+					document.getElementById("downvote").className+= "vote downvote";
+					voting = 0;
+				}
+			break;		
+
+		}
+});

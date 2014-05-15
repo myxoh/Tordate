@@ -1,0 +1,86 @@
+<script>
+evidence=2;
+function addevidence(){
+var container = document.getElementById("sources")
+                container.appendChild(document.createElement("br"));
+                 var input = document.createElement("input");
+                input.type = "text";
+                input.name = "evidence[" + evidence +"][url]";
+                input.id= "evidence[" + evidence +"][url]";
+                input.placeholder="URL"
+                input.className="inputs";
+                container.appendChild(input);
+                container.appendChild(document.createElement("br"));
+                
+                var input = document.createElement("input");
+                input.type = "text";
+                input.name = "evidence[" + evidence +"][desc]";
+                input.id = "evidence[" + evidence +"][desc]";
+                input.placeholder="Desc"
+                input.className="inputs";
+                container.appendChild(input);
+                container.appendChild(document.createElement("br"));
+evidence++;
+return false;
+}
+</script>
+<script type="text/javascript">
+//<![CDATA[
+bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+//]]>
+</script>
+
+<div class="news">
+				<a class="go-back" href="/">Go back</a>
+				<p class="profile">Edit article<br></p>
+
+			</div>
+
+			
+<%if @error.blank?%>
+<div class="writer"><%=form_tag '/article/save/'+@article.id.to_s, multipart: true do%>
+<input type="hidden" name="writing" value=true>
+					<p class="info">Headline: <span class="more"><%=@article.headling%></span></p>
+
+					<p class="info">Description: <span class="more"><%=@article.header%></span></p>
+
+					<p class="info">Image:<br> <img src="<%=@article.picture%>" width="90" height="90"></p>
+		
+
+					<p class="info">Body:</p>
+					<div style="width: 910px; margin: 0 auto;">    
+    						<textarea name="body" style="height: 200px; width:900px;"><%=@article.body%></textarea>
+					</div>
+
+			</div>
+			
+        	<div class="sources" id="sources">
+
+				<p class="info">URL Sources: <span class="more">(optional)</span></p>
+				<input type="text"  name="evidence[1][url]" class="inputs" placeholder="Url (1)"><!--<a class="add-more" onClick="return addevidence()">Add more</a><br>-->
+                <input type="text"  name="evidence[1][desc]" class="inputs" placeholder="Description (1)"><br>
+                <br>
+                <input type="text"  name="evidence[2][url]" class="inputs" placeholder="Url (2)"><!--<a class="add-more" onClick="return addevidence()">Add more</a><br>-->
+                <input type="text"  name="evidence[2][desc]" class="inputs" placeholder="Description (2)"><br>
+                  <br>
+                <input type="text"  name="evidence[3][url]" class="inputs" placeholder="Url (3)"><!--<a class="add-more" onClick="return addevidence()">Add more</a><br>-->
+                <input type="text"  name="evidence[3][desc]" class="inputs" placeholder="Description (3)"><br>
+                  <br>
+                <input type="text"  name="evidence[4][url]" class="inputs" placeholder="Url (4)"><!--<a class="add-more" onClick="return addevidence()">Add more</a><br>-->
+                <input type="text"  name="evidence[4][desc]" class="inputs" placeholder="Description (4)"><br>
+                  <br>
+                <input type="text"  name="evidence[5][url]" class="inputs" placeholder="Url (5)"><!--<a class="add-more" onClick="return addevidence()">Add more</a><br>-->
+                <input type="text"  name="evidence[5][desc]" class="inputs" placeholder="Description (5)"><br>
+			</div>
+			
+			<div class="publish"><input type="submit" style="height:50px; width:150px;" class="btn" value="Publish"></input></div>
+            <%end%>
+			<div class="clear-both"></div>			
+
+<%else%>
+Errores:<br>
+<%@error.each do |e|%>
+*<%=e%><br>
+<%end%>
+<%end%>
+

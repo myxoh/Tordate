@@ -1,0 +1,6 @@
+body, td, pre {
+	color:#303030; 
+	font-family:sans-serif; 
+	font-size:13px; 
+	margin:8px;
+}

@@ -1,0 +1,46 @@
+class GuardianFeed
+require 'open-uri'
+
+#For The Guardian
+def self.parserXML url
+    page = Nokogiri::XML(open(url))   
+end
+
+def self.parserHTML url
+    page = Nokogiri::HTML(open(url))   
+end
+
+
+def self.writeArticle headling,header,body,imagepicture,source
+    ar=Article.create(headling:headling,header:header,body:body)
+    Evidence.create(url:source,article_id:ar.id)
+    if !imagepicture.nil?
+        ar.picture = URI.parse(imagepicture)
+        ar.save
+    end
+end
+
+def self.main
+    url = "http://www.theguardian.com/uk/rss"
+
+    @articles=[]
+    rssFeed = parserXML url
+        @links = rss.xpath('//item').map do |i|
+        {'title' => i.xpath('title').inner_text,
+         'link' => i.xpath('link').inner_text, 
+         'description' => i.xpath('description').inner_text[0..i.xpath('description').inner_text.index("<a")-1]
+        }
+        @links.each do |l|
+            #if !Article.find_by_headling(l.title)
+                article=parserHTML l["link"]
+                body=""
+                article.css('#article-body-blocks').css('p').each do |p|
+                    body+=p
+                end
+                if article.css('#main-content-picture img').empty? then image=article.css('#main-content-picture img').first["src"] else image=nil end
+                writeArticle(l[:title],l[:description],body,image,l[:link])
+            #end
+            sleep 120
+        end
+    end
+end

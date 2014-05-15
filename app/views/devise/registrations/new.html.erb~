@@ -1,0 +1,24 @@
+
+			<div class="sign-up"><p class="title">Sign up</p><p class="subtitle">It's fast! Join tordate today!<br><br>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <%= f.email_field :email, autofocus: true, class: "inputs", placeholder:"E-mail"%>
+    <%= f.password_field :password, autocomplete: "off", class: "inputs", placeholder:"Password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "inputs", placeholder:"Password confirmation" %>
+  <%= f.text_field :name, class: "inputs", placeholder:"Name (Optional)" %>
+  <%= f.text_field :surname, class: "inputs", placeholder:"Surname (Optional)" %> <br>  
+  <%= f.text_field :username, class: "inputs", placeholder:"Username (Required)" %> <br> 
+  <%= f.submit "Sign up", class:"btn"%>
+<% end %>
+
+<%if !devise_error_messages!.blank?%>
+<div class="register-error">
+						The following errors ocurred:<br>
+					  <%= devise_error_messages! %>
+					  <%= notice%>
+					  <%= alert%>	
+						
+</div>
+<%end%>

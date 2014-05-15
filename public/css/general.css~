@@ -1,0 +1,261 @@
+html, body{
+	margin: 0px;
+	height:100%;
+	font-family: sans-serif;
+	background-color: #f5f6f7;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.notice{
+font-family: sans-serif;
+font-weight: bold;
+font-size: 13px;
+margin-top: 30px;
+margin-bottom: -5px;
+text-align: center;
+color: #26272f;
+}
+.container{
+	position: relative;
+	width: 100%;
+	min-height:100%;
+	margin:0 auto;
+}
+
+/* HEADER */
+
+.header{
+	position: relative;
+	width:100%;
+	height: 70px;
+	background: #fff;
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+	-moz-box-shadow:    0px 0px 2px 0px #cccccc;
+    -webkit-box-shadow: 0px 0px 2px 0px #cccccc;
+  	box-shadow:         0px 0px 2px 0px #cccccc;
+}
+
+.header input[type=text], input[type=password], input[type=email]{
+	border: solid 1px #c1c1c1;
+	padding-left: 2px;
+	height: 17px;
+	margin-top: 2px;
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	width: 130px;
+	margin-right: 4px;
+}
+
+.header .navigation{
+	max-width: 1190px;
+	min-width: 780px;
+	margin: 0 auto;
+}
+
+.header .navigation .logo{
+	float:left;
+	background-image: url(/img/logo-1.png);
+	background-position: top;
+	width: 120px;
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 15px;
+}
+
+.header .navigation .account{
+	margin-top: 9px;
+	float: right;
+	width: 532px;
+	height: auto;
+	color: #777777;
+	font-family: sans-serif;
+	font-size: 12px;
+	position: relative;
+}
+
+.header .navigation .checkbox{
+	margin-top: 11px;
+	margin-left: 0px;
+}
+
+.header .navigation .remember{
+	height: 12px;
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 5px;
+	margin-left: 20px;
+}
+
+.header .navigation .forgot{
+	height: 12px;
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 5px;
+	margin-left: 124px;
+	color: gray;
+	text-decoration: none;
+}
+
+.header .navigation .forgot:hover{
+	text-decoration: underline;
+}
+
+.header .navigation .account.login{
+	position: absolute;
+	height: 22px;
+	width: 80px;
+	background-color: #243640;
+	border-style: none;
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 11px;
+	color: #fff;
+	text-align: center;
+	padding: 3px 15px 7px 10px;
+	margin-left: 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	margin-top: 2px;
+	border-radius: 4px;
+	-webkit-transition: all 200ms ease;
+ 	-moz-transition: all 200ms ease;
+ 	-ms-transition: all 200ms ease;
+ 	-o-transition: all 200ms ease;
+ 	transition: all 200ms ease;
+}
+
+.header .navigation .account.login:hover{
+	background-color: #3a7eda;
+	cursor: pointer;
+	-webkit-transition: all 200ms ease;
+ 	-moz-transition: all 200ms ease;
+ 	-ms-transition: all 200ms ease;
+ 	-o-transition: all 200ms ease;
+ 	transition: all 200ms ease;
+}
+
+.header .navigation .account.login-facebook{
+	position: absolute;
+	height: 19px;
+	width: 140px;
+	background-color: #243640;
+	border-style: none;
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 11px;
+	color: #fff;
+	background-image: url(/img/facebook-icon.png);
+	background-repeat: no-repeat;
+	background-position: 8px 5px;
+	text-align: center;
+	padding: 3px 0px 0px 12px;
+	text-decoration: none;
+	margin-left: 103px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	margin-top: 2px;
+	border-radius: 4px;
+	-webkit-transition: all 200ms ease;
+ 	-moz-transition: all 200ms ease;
+ 	-ms-transition: all 200ms ease;
+ 	-o-transition: all 200ms ease;
+ 	transition: all 200ms ease;
+}
+
+.header .navigation .account.login-facebook:hover{
+	background-color: #3a7eda;
+	cursor: pointer;
+	-webkit-transition: all 200ms ease;
+ 	-moz-transition: all 200ms ease;
+ 	-ms-transition: all 200ms ease;
+ 	-o-transition: all 200ms ease;
+ 	transition: all 200ms ease;
+}
+
+.header .navigation .account.signup{
+	position: absolute;
+	height: 19px;
+	width: 80px;
+	background-color: #243640;
+	border-style: none;
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 11px;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	padding: 3px 0px 0px 0px;
+	margin-left: 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	margin-top: 27px;
+	border-radius: 4px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
+.header .navigation .account.signup:hover{
+	background-color: #ff7800;
+	cursor: pointer;
+	-webkit-transition: all 200ms ease;
+ 	-moz-transition: all 200ms ease;
+ 	-ms-transition: all 200ms ease;
+ 	-o-transition: all 200ms ease;
+ 	transition: all 200ms ease;
+}
+
+.header .navigation .account-logged{
+
+	float:right;
+	font-size: 13px;
+	font-family: sans-serif;
+	color: #888888;
+	padding-top: 26px;
+
+}
+
+.header .navigation .account-logged .username-color{
+	color:#ff7800;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.header .navigation .account-logged .username-color:hover{
+	color:#ff9a09;
+	font-weight: bold;
+}
+
+.header .navigation .account-logged .sign-out{
+	color: #26272f;
+	text-decoration: none;
+}
+
+.header .navigation .account-logged .sign-out:hover{
+	color:#26272f;
+	text-decoration: underline;
+}
+
+/* FOOTER */
+
+.footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width:100%;
+	height: 100px;
+	background-color: #f5f6f7;
+	background-image: url(/img/logo-footer.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}

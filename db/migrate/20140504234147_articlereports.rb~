@@ -1,0 +1,6 @@
+class Articlereports < ActiveRecord::Migration
+  def change
+  add_columns   :articles,  :reportev,  :integer
+  add_columns   :articles,  :reportco,  :integer
+  end
+end

@@ -1,0 +1,14 @@
+<script>
+document.onload=parent.refreshscore();
+</script>
+
+<%if @voted_up%>
+Voted <a href="/vote/article/up/<%=@id%>">(Unvote)</a>
+<%else%>
+<a href="/vote/article/up/<%=@id%>">Vote UP </a>
+<%end%> /
+<%if @voted_down%>
+Voted <a href="/vote/article/down/<%=@id%>">(Unvote)</a>
+<%else%>
+<a href="/vote/article/down/<%=@id%>">Vote DOWN </a>
+<%end%>

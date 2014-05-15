@@ -1,0 +1,52 @@
+class UserController < ApplicationController
+  def profile
+  end
+
+  def login
+  user=User.find_by_email(params[:email])
+  if !user.blank? and user.password==params[:password] then 
+      session[:user]=user.id 
+      if params[:old_direction].blank?
+        redirect_to "/"
+      else
+        redirect_to params[:old_direction]
+      end
+  else
+      if params[:old_direction].blank?
+        redirect_to "/"
+      else
+        redirect_to params[:old_direction]
+      end
+  end
+  
+  end
+
+  def register
+  if params[:registering]
+    if params[:user][:password]==params[:checkpassword]
+    errors=[]
+        if validators(user_params,errors)
+            u=User.create(user_params)
+            session[:user]=u.id
+            redirect_to "/"
+        end
+    end
+  end
+  end
+  
+  def logout
+    session[:user]=""
+    redirect_to "/"
+  end
+  
+  
+  private
+  def user_params
+  params.require(:user).permit(:name,:surname,:email,:password)
+  end
+  
+  private
+  def validators(to_check, errors)
+  return true
+  end
+end

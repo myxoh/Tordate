@@ -1,0 +1,6 @@
+class Todevise < ActiveRecord::Migration
+  def change
+  delete_column  :users, :password
+  delete_column :users, :email
+  end
+end

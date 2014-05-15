@@ -1,0 +1,12 @@
+<h1>Your Followers / People you follow : </h1>
+<b>Followers:</b><br>
+<%if @user.followers.empty?%> You are not followed by anyone <%end%>
+<%@user.followers.each do |f|%>
+<a href="/user/profile/<%=f.id%>"><%=get_name(f)%></a><br>
+<%end%>
+<hr>
+<b>Following:</b><br>
+<%if @user.following.empty?%> You are not following anyone <%end%>
+<%@user.following.each do |f|%>
+<a href="/user/profile/<%=f.id%>"><%=get_name(f)%></a><br>
+<%end%>
