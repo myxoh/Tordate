@@ -9,4 +9,3 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Torchupdate::Application.config.secret_key_base = 'a67a00a3dad9bffdf0e246e7d578f3445058d11d01724fdb95333c395069aa385bbb30c676b85ba4b068e56a1c877c00605f0e375f9c649fee2c91f31d486f2c'
