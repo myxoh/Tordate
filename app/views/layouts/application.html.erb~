@@ -29,6 +29,36 @@ if @config[:image].blank? then @config[:image]="http://tordate.com/img/logo-1.pn
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
   <meta charset="UTF-8">
   <script type="text/javascript"> function resizeIframe(obj) { { obj.style.height = 0; } ; { obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px'; } } </script>
+  
+  <!-- Facebook Conversion Code for Se registraron a Tordate -->
+
+    <script type="text/javascript">
+
+    var fb_param = {};
+
+    fb_param.pixel_id = '6018432363360';
+
+    fb_param.value = '0.01';
+
+    fb_param.currency = 'ARS';
+
+    (function(){
+
+    var fpw = document.createElement('script');
+
+    fpw.async = true;
+
+    fpw.src = '//connect.facebook.net/en_US/fp.js';
+
+    var ref = document.getElementsByTagName('script')[0];
+
+    ref.parentNode.insertBefore(fpw, ref);
+
+    })();
+
+    </script>
+
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/offsite_event.php?id=6018432363360&amp;value=0.01&amp;currency=ARS" /></noscript>
 </head>
 
 
@@ -62,12 +92,12 @@ if @config[:image].blank? then @config[:image]="http://tordate.com/img/logo-1.pn
 	<div class="header">
 		<div class="navigation">
 			<a class="logo" href="/"></a>
-            <div style="width:400px;display:inline-block;margin-top:30px;margin-left:100px;">Language: 
-            <select id="language" onchange="changeLanguage()">
+             <!--<div style="width:400px;display:inline-block;margin-top:30px;margin-left:100px;">Language: 
+             <select id="language" onchange="changeLanguage()">
             <%Language.all.each do |l|%>
             <option value="<%=l.id%>"><%=l.longname%></option>
             <%end%>
-            </select></div>
+            </select></div>-->
 			<!-- DIV USER LOGGED -->
 			<!--  -->
 
