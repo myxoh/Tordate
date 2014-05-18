@@ -1,5 +1,6 @@
 Torchupdate::Application.routes.draw do
 
+  get "contest/:contest" => "contest#index"
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   get "vote/article/:id" => "vote#show"
   get "vote/article/up/:id" => "vote#up"

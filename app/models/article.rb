@@ -5,6 +5,7 @@ belongs_to :user
 has_many :evidence
 has_many :counterevidence
 has_many :categorizes
+has_many :votes, class_name:"VoteArticle"
 has_many :categories, :through => :categorizes
 has_many :regionalizes
 belongs_to :language
