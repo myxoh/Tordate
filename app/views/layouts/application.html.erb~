@@ -131,7 +131,7 @@ if @config[:image].blank? then @config[:image]="http://tordate.com/img/logo-1.pn
 
 
 
-       <p class="notice"><%if session[:visited_contest_1].nil? and (rand*10).to_i<11%>Win up to 200 U$D by writing an Article. <a href='/contest/1'>Learn How</a> <br> <%end%><%= notice %></p>
+       <p class="notice"><%if cookies[:visited_contest_1].nil? and (rand*10).to_i<11%>Win up to 200 U$D by writing an Article. <a href='/contest/1'>Learn How</a> <br> <%end%><%= notice %></p>
        <p class="alert"><%= alert %></p>
         <%= yield %>
 			

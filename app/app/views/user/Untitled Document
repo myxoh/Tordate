@@ -1,0 +1,10 @@
+<b>Followers:</b><br>
+<%@user.followers.each do |f|%>
+<a href="/user/profile/<%=f.id%>"><%=get_name(f)%></a><br>
+<%end%>
+<hr>
+<b>Following:</b><br>
+<%@user.followeds.each do |f|%>
+<a href="/user/profile/<%=f.id%>"><%=get_name(f)%></a><br>
+<%end%>
+<hr>

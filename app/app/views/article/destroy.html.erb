@@ -1,0 +1,7 @@
+<%if @destroyed%>
+Article has been destroyed succesfully
+<%else%>
+<%@error.each do |e|%>
+*<%=e%><br>
+<%end%>
+<%end%>

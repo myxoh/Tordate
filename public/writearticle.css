@@ -1,0 +1,258 @@
+.content{
+	width:960px;
+	margin: 0 auto;
+	min-height: 100%;
+	padding-bottom: 100px;
+}
+
+.content .news{
+	height:auto;
+	padding-top: 25px;
+	margin-bottom: 18px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	background-image: url(/img/writearticle-icon.png);
+	background-repeat: no-repeat;
+	background-position: 0px 45px;
+}
+
+.content .news .profile{
+	font-weight: 700;
+	font-size: 30px;
+	color: #26272f;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+
+.content .news .profile-subtitle{
+	font-weight: 400;
+	color: #50565c;
+	margin-bottom: 4px;
+}
+
+.content .news .profile-written{
+	margin-left: 20px;
+	margin-top: 25px;
+	font-weight: 400;
+	color: #50565c;
+}
+
+.content .news .go-back{
+	float: right;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	height: 28px;
+	width: 102px;
+	margin-top: 11px;
+	background:#3a7eda;
+	background-position: 14px 14px;
+	border-bottom: 2px solid #376096;
+	font-family:sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 12px;
+}
+
+.content .news .go-back:hover{
+	background-color:#4089ec;
+	border-bottom: 2px solid #3364a6;
+	cursor: pointer;
+}
+
+.content .news .go-back:active{
+	height: 26px;
+	width: 102px;
+	background:#3a7eda;
+	border-top: 2px solid #376096;
+	border-bottom: 2px solid #3a7eda;
+	padding-top: 12px;
+}
+
+.content .writer{
+	height:auto;
+	width:100%;
+	padding-top: 2px;
+	padding-bottom: 26px;
+	margin-top: 40px;
+	margin-bottom: 16px;
+	border-bottom: 1px solid #dadada;
+	background: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.content .writer .info{
+	margin-left: 25px;
+	font-weight: bold;
+	font-size: 13px;
+	margin-bottom: 7px;
+	margin-top: 15px;
+}
+
+.content .writer .info .more{
+	font-weight: normal;
+	font-style: italic;
+}
+
+.content .writer .inputs{
+   	margin: 0 auto;
+	width: 903px;
+	height: 30px;
+	margin-left: 25px;
+	font-size: 13px;
+	padding-left: 5px;
+	border: solid 1px #bec6ce;
+	color: #5b656f;
+}
+
+.content .writer .choose{
+	margin-left: 25px;
+	margin-bottom: 5px;
+}
+
+.content .writer .inputsfocus{
+	border: solid 1px #434e5c;
+}
+
+.content .sources{
+	float: left;
+	height: auto;
+	width:746px;
+	overflow: auto;
+	padding-top: 15px;
+	padding-bottom: 16px;
+	margin-bottom: 7px;
+	border-bottom: 1px solid #dadada;
+	background: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.content .sources .info{
+	margin-left: 25px;
+	font-weight: bold;
+	font-size: 13px;
+	margin-bottom: 7px;
+}
+
+.content .sources .info .more{
+	font-weight: normal;
+	font-style: italic;
+}
+
+.content .sources .inputs{
+   	margin: 0 auto;
+	width: 580px;
+	height: 30px;
+	margin-left: 25px;
+	margin-bottom: 8px;
+	font-size: 13px;
+	padding-left: 5px;
+	border: solid 1px #bec6ce;
+	color: #5b656f;
+}
+
+.content .sources .add-more{
+	float: right;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	height: 24px;
+	width: 76px;
+	margin-top: 0px;
+	background: #3a7eda;
+	background-position: 14px 14px;
+	border-bottom: 2px solid #376096;
+	font-family: sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 8px;
+	margin-right: 15px;
+}
+
+.content .sources .add-more:hover{
+	background-color:#4089ec;
+	border-bottom: 2px solid #3364a6;
+	cursor: pointer;
+}
+
+.content .sources .add-more:active{
+	height: 22px;
+	background:#3a7eda;
+	border-top: 2px solid #376096;
+	border-bottom: 2px solid #3a7eda;
+	padding-top: 8px;
+}
+
+.content .publish{
+	float: left;
+	height:55px;
+	width:198px;
+	padding-top: 15px;
+	padding-bottom: 26px;
+	margin-left: 16px;
+	margin-bottom: 7px;
+	border-bottom: 1px solid #dadada;
+	background: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.content .publish .btn {
+ float: left;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ border-radius: 3px;
+ border: none;
+ height: 50px;
+ width: 162px;
+ margin-top: 5px;
+ margin-left: 18px;
+ background-position: 14px 14px;
+ border-bottom: 2px solid #18191c;
+ font-family: sans-serif;
+ font-weight: 700;
+ font-size: 14px;
+ text-decoration: none;
+ color: #fff;
+ text-align: left;
+ padding-left: 30px;
+ padding-right: 15px;
+ padding-top: 4px;
+ background: #26272f url(/img/publish-btn-icon.png) no-repeat 110px 16px;
+}
+
+.content .publish .btn:hover{
+ background-color:#333442;
+ border-bottom: 2px solid #21222a;
+ cursor: pointer;
+}
+
+.content .publish .btn:active{
+ height: 50px;
+ background: #26272f url(/img/publish-btn-icon.png) no-repeat 110px 15px;
+ border-top: 2px solid #18191c;
+ border-bottom: 2px solid #26272f;
+ padding-top: 5px;
+}
+
+.content .clear-both{
+	clear: both;
+	height: 0px;
+	width: 100%;
+	background: blue;
+}

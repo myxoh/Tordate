@@ -1,0 +1,6 @@
+<%@articles.each do |a|%>
+<a href="/article/show/<%=a.id%>"><%=a.headling%></a><br>
+<%=a.header%>
+<hr>
+<%end%>
+

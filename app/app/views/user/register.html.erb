@@ -1,0 +1,9 @@
+<%=form_tag do%>
+<input type="hidden" name="registering" value=true>
+<input type="text" name="user[name]" placeholder="Name"><br>
+<input type="text" name="user[surname]" placeholder="Surname"><br>
+<input type="text" name="user[email]" placeholder="Email"><br>
+<input type="password" name="user[password]" placeholder="Password"><br>
+<input type="password" name="checkpassword" placeholder="Check Password"><br>
+<input type="submit" value="Register">
+<%end%>

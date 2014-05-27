@@ -151,7 +151,7 @@ refreshscore();
 
 					<p class="title"><%=@article.headling%></p>
 					<p class="subtitle"><%=@article.header%></p>
-					<p class="author">by <a class="profile" href="/user/profile/<%=@article.user.id%>"><%=@article.user.name.to_s+" "+@article.user.surname.to_s%></a> - <strong>Date:</strong> <%=distance_of_time_in_words(@article.created_at,Date.today)%> ago.</p>
+					<p class="author">by <a class="profile" href="/user/profile/<%=@article.user.id%>"><%=get_name(@article.user)%></a> - <strong>Date:</strong> <%=distance_of_time_in_words(@article.created_at,Date.today)%> ago.</p>
 					<div class="separator"></div>
 					<div class="body-wrapper"><%=raw(@article.body)%></div>
 

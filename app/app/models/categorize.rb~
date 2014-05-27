@@ -1,0 +1,2 @@
+class Categorize < ActiveRecord::Base
+end

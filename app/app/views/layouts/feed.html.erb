@@ -1,0 +1,17 @@
+<%= auto_discovery_link_tag :atom, "/feed" %>
+<%= auto_discovery_link_tag :rss, "/feed.rss" %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Torchupdate</title>
+  <link rel="stylesheet" type="text/css" href="/css/index.css">
+  <link rel="stylesheet" type="text/css" href="/css/profile.css">
+  <link rel="stylesheet" type="text/css" href="/css/general.css">
+  <script src="/js/general.js" type="text/javascript"></script>
+  <script src="/js/index.js" type="text/javascript"></script>
+</head>
+<body>
+<%= yield %>
+
+</body>
+</html>
