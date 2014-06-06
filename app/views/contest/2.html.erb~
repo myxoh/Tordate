@@ -1,6 +1,6 @@
-
+<%cookies.permanent[:visited_contest_2]=true%>
 <div id="fb-root"></div>
-<div style="background-color: #EFE; width:900px;margin-left:auto;margin-right:auto; height:1000px;">
+<div style="background-color: #EFE; width:900px;margin-left:auto;margin-right:auto; height:950px;">
 <center><h1>First Tordate Contest</h1></center>
 <center><h3>Win up to 200 U$D by writing the best Article of the Month</h3>Valid from May 15, 2014 to May 25, 2014</center>
 <b>Rules:</b><br>
@@ -13,9 +13,9 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="fb-share-button" data-href="http://tordate.com/contest/1" data-type="button_count"></div>
+<div class="fb-share-button" data-href="http://www.tordate.com/contest/1" data-type="button_count"></div>
 
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tordate.com/contest/1">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tordate.com/contest/2">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <br>
 2) <a href="/users/sign_up" target="_blank">Sign up</a> for a new account or Sign in with Facebook (above) <b> Use your real e-mail</b> we will contact the winner via e-mail for the payment. The payment will be done via paypal.<br>
@@ -27,10 +27,10 @@
 <b>Prices</b><br>
 <i>Prices depend on the amount of upvotes your article has received. Only the article with the highest score will win the prize<br>
 (Every vote grants 10 points to the score. Articles with 400 up-votes could have up to 4000 points depending on the down-votes)</i><br>
-<b>400 or +</b> - If the winning article has 400 upvotes or more: It will receive 200 U$D. <br>
-<b>300 or +</b> - If the winning article has 300 upvotes or more: It will receive 100 U$D. <br>
-<b>200 or +</b> - If the winning article has 200 upvotes or more: It will receive 50 U$D. <br>
-<b>100 or +</b> - If the winning article has 100 upvotes or more: It will receive 10 U$D. <br>
+<b>400 or +</b> - If the winning article has 400 upvotes or more: It will receive 500 U$D. <br>
+<b>300 or +</b> - If the winning article has 300 upvotes or more: It will receive 300 U$D. <br>
+<b>200 or +</b> - If the winning article has 200 upvotes or more: It will receive 150 U$D. <br>
+<b>100 or +</b> - If the winning article has 100 upvotes or more: It will receive 50 U$D. <br>
 <b>0 to 99</b> - If the winning article has less than 100 upvotes there is no prize.<br>
 <br>
 <br>
@@ -41,20 +41,6 @@
 4) Articles from the automatically generated users of this Site (such as Fox_News) won't be participating of the contest.
 <br>
 <br>
-<b>Results: (If the Article doesn't comply with our restrications it will be discarded on the 24th)</b><br>
-<%
-article=Article.first
-Article.order("score DESC").each do |a|
-if a.score<=a.votes.where(is_up:true).count*10
-article=a
-break
-end
-end
-%>
-The Article winning is:<a href="/article/show/<%=article.id%>"> <%=article.headling%> </a><br>
-It's score is: <%=article.score%> <br>
-It's author is: <%=get_name(article.user)%> <br>
-It has: <%=article.votes.where(is_up:true).count%><br> Upvotes! 
 <span style="font-size:10px">*Shares are optional, but they may help you! We encourage you to share anyway </span>
 </div>
 

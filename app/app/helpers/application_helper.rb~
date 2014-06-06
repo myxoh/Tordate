@@ -1,7 +1,0 @@
-module ApplicationHelper
-  def get_config(name)
-    return ConfigParams.find_by_name(name).value
-  end
-  
- 
-end
