@@ -35,5 +35,5 @@ production:
   database: Torchupdate_production
   pool: 5
   username: root
-  password: fnisalknfkjan289j1rei91
+  password: root
   socket: /var/lib/mysql/mysql.sock

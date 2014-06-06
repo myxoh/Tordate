@@ -1,5 +1,6 @@
 class UpdateNews
     def self.main
+     Thread.new{
         begin
        
         Thread.new{
@@ -30,5 +31,6 @@ class UpdateNews
         }
         rescue
         end
+        }
     end
 end

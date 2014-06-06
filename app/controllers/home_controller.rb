@@ -5,8 +5,11 @@ class HomeController < ApplicationController
   end
 
   def update
-  UpdateNews.main
-  redirect_to index, notice: "Updating news..."
+   Thread.new do
+        UpdateNews.main
+    end
+  redirect_to "/", notice: "Updating news..."
+  
   end
   
   def about
